@@ -1,0 +1,18 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    background-color: #d3c7ff;
+    align-items: center;
+
+    &__table {
+        width: 60%;
+    }
+
+    &__h2 {
+        font-size: 40px;
+        font-family: initial;
+        color: #071521;
+    }
+}

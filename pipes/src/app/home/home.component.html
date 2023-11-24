@@ -1,0 +1,33 @@
+<div class="main">
+    <div class="heading">
+        <h2 class="main__h2">{{heading| uppercase}}</h2>
+    </div>
+    <p>{{text| lowercase}}</p>
+    <p>Current Date and Time : {{tme| date:'medium'}}</p>
+    <div class="main__table">
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Place</th>
+                    <th scope="col">Salary</th>
+                    <th scope="col">Attendence (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let emp of employees">
+                    <th scope="row">{{emp.id}}</th>
+                    <td>{{emp.name| titlepipe:emp.gender}}</td>
+                    <td>{{emp.age}}</td>
+                    <td>{{emp.gender}}</td>
+                    <td>{{emp.place}}</td>
+                    <td>{{emp.Salary|currency:'INR':'symbol':'5.0'}}</td>
+                    <td>{{emp.Ap|percent}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
